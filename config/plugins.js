@@ -7,12 +7,10 @@ module.exports = ({ env }) => ({
         cloud_name: env("CLOUDINARY_NAME"),
         api_key: env("CLOUDINARY_KEY"),
         api_secret: env("CLOUDINARY_SECRET"),
-        upload_preset: "sport-blog"
+        upload_preset: env("CLOUDINARY_UPLOAD_PRESET"),
       },
       actionOptions: {
-        upload: {
-          folder: env("CLOUDINARY_FOLDER"),
-        },
+        upload: {},
         uploadStream: {
           folder: env("CLOUDINARY_FOLDER"),
         },
